@@ -1,0 +1,31 @@
+body{
+	background: #35A9DB;
+	font-family: roboto;
+	color: #fff;
+}
+#header{
+		background: teal;
+		color: #333;
+		height: 50px;
+		padding: 50px;
+		}
+.clr{
+	color: white;
+	background: silver;
+	padding: 30px;
+		
+	}
+h1{
+	width: 550px;
+}
+.kotak{
+	background: blue;
+	width: 200px;
+	height: 200px;
+	animation-name: animasi_kotak;
+	animation-duration: 2s;
+}
+@keyframe animasi kotak{
+	from{ background: blue; }
+	to{background: red;}
+}
