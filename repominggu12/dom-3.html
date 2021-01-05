@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viweport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM API Javascript (DOM 3)</title>
+	<style>
+		body{
+			background: pink;
+		}
+		.clr{
+			background: silver;
+			padding: 30px;
+		
+			}
+		.jvs{
+			color: white;
+			background: grey;
+			padding: 30px;
+			}
+		</style>
+</head>
+<body>
+	<center>
+		<nav class="clr">
+		 	<a href="dom-1.html">dom-1||</a>
+		 	<a href="dom-2.html">dom-2||</a>
+		 	<a href="dom-3.html">dom-3||</a>
+		 	<a href="dom-createElement.html">dom-createElement||</a>
+		 	<a href="dom-remove.html">dom-remove||</a>
+		 	<a href="dom-contohKasus.html">dom-contohKasus||</a>
+		 	<a href="fungsi-1.html">fungsi-1||</a>
+		 	<a href="objek-1.html">objek-1||</a>
+		 	<a href="objek-class.html">objek-class||</a>
+		 	
+		 </nav>
+<div class="jvs">
+	<p class="paragraf">JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. 
+		JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT.</p>
+	<p class="paragraf">JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. 
+		JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT.</p>
+	<p class="paragraf">JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. 
+		JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT.</p>
+
+	<script>
+		var paragraf = document.getElementsByClassName("paragraf");
+		setInterval(function (){
+			paragraf[0].style.color = "red";
+			paragraf[1].style.color = "green";
+			paragraf[2].style.color = "blue";
+
+			setTimeout (function (){
+				paragraf[0].style.color = "black";
+				paragraf[1].style.color = "black";
+				paragraf[2].style.color = "black";
+			}, 500)
+		}, 1000);
+	</script>
+</div>
+</center>
+</body>
+</html>
