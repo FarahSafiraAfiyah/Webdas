@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Array Contoh Method</title>
+	<style>
+		body{
+			background: pink;
+		}
+		.clr{
+			background: silver;
+			padding: 30px;
+		
+			}
+		.jvs{
+			color: white;
+			background: grey;
+			padding: 30px;
+			}
+		</style>
+</head>
+<body>
+	<center>
+		<nav class="clr">
+		 	<a href="cabang-if.html">cabang-if||</a>
+		 	<a href="cabang-if-else.html">cabang-if-else||</a>
+		 	<a href="cabang-if-else-if.html">cabang-if-else-if||</a>
+		 	<a href="cabang-switch-case.html">cabang-switch-case||</a>
+		 	<a href="cabang-ternary.html">cabang-ternary||</a>
+		 	<a href="cabang-nested.html">cabang-nested||</a>
+		 	<a href="perulangan-for.html">erulangan-for||</a>
+		 	<a href="perulangan-while.html">perulangan-while||</a>
+		 	<a href="perulangan-do-while.html">perulangan-do-while||</a>
+		 	<a href="perulangan-foreach.html">perulangan-foreach||</a>
+		 	<a href="perulangan-foreach-2.html">perulangan-foreach-2||</a>
+		 	<a href="perulangan-repeat.html">perulangan-repeat||</a>
+		 	<a href="perulangan-nested-1.html">perulangan-nested-1||</a>
+		 	<a href="perulangan-nested-2.html">perulangan-nested-2||</a>
+		 	<a href="array-data.html">array-data||</a>
+		 	<a href="array-perulangan.html">array-perulangan||</a>
+		 	<a href="array-tambah-data.html">array-tambah-data||</a>
+		 	<a href="array-hapus-depan.html">array-hapus-depan||</a>
+		 	<a href="array-hapus-tertentu.html">array-hapus-tertentu||</a>
+		 	<a href="array-contoh-method.html">array-contoh-method||</a>
+		 </nav>
+<div class="jvs">
+	<script>
+		//method filter
+		const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+		document.write("<br><b>Array Angka: </b>")
+		document.write(angka + "<br>")
+
+		// ambil data yang hanya habis dibagi dua
+		const filteredArray = angka.filter(item => item % 2 === 0);
+
+		console.log(filteredArray) // -> [2, 4, 6, 8]
+		document.write("Filtered Array: ")
+		document.write(filteredArray + "<br><br>")
+
+		// Method Includes
+		var tanaman = ["Padi", "Kacang", "Jagung", "Kedelai"];
+		document.write("<b>Array Tanaman: </b>")
+		document.write(tanaman + "<br><br>")
+
+		// apakah kacang sudah ada di dalam array tanaman?
+		var adaKacang = tanaman.includes("Kacang");
+		document.write("<b>Apakah ada kacang didalam Array?</b><br><b>Jawab: </b>")
+		document.write("Ada kacang didalam array <br><br>")
+
+		console.log(adaKacang); // -> true
+	
+		// apakah bayam ada?
+		var adaBayam = tanaman.includes("Bayam");
+		document.write("<b>Apakah ada bayam didalam Array?</b><br><b>Jawab: </b>")
+		document.write("Tidak ada Bayam didalam array<br><br>")
+
+		console.log(adaBayam); // -> false
+
+		//Method Short
+		var alfabet = ['a','f','z','e','r','g'];
+		document.write("<b>Array Alfabet: </b>")
+		document.write(alfabet + "<br>")
+		var angka2 = [3,1,2,4,6,8,5,7,9];
+		document.write("<b>Array angka2: </b>")
+		document.write(angka2 + "<br><br>")
+
+		console.log(alfabet.sort()); //-> ["a", "e", "f", "g", "r", "z"]
+		document.write("<b>Sorted Alfabet: </b>")
+		document.write(alfabet+ "<br>")
+		console.log(angka2.sort()); // -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+		document.write("<b>Sorted angka2: </b>")
+		document.write(angka2+ "<br><br>")
+	</script>
+</div>
+</center>
+</body>
+</html>
