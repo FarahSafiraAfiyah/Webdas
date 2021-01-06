@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset ="UTF-8">
+	<meta name="viewport" content="Width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Belajar Dasar Ajax</title>
+<style>
+		body{
+			background: pink;
+		}
+		#header{
+			background: grey;
+			color: #333;
+			height: 50px;
+			padding: 50px;
+			}
+		.clr{
+			color: white;
+			background: silver;
+			padding: 30px;
+		
+			}
+		</style>
+</head>
+<body>
+	<center>
+		<nav class="clr">
+		 	<nav class="clr">
+		 	<a href="ajax-1.html">ajax-1||</a>
+		 	<a href="ajax-2.html">ajax-2||</a>
+		 	<a href="ajax-3.html">ajax-3||</a>
+		 	<a href="ajax-jquery.html">ajax-jquery||</a>
+		 	<a href="ajax-jquery2.html">ajax-jquery2||</a>
+		 	<a href="ajax-fetch.html">ajax-fetch||</a>
+		 	<a href="ajax-axios.html">ajax-axios||</a>
+		 	<a href="latihan-json.html">latihan-json||</a>
+		 	<a href="latihan-json2.html">latihan-json2||</a>
+		 	<a href="latihan-json-jquery.html">latihan-json-jquery||</a>
+		 	<a href="latihan-json-jquery2.html">latihan-json-jquery2||</a>
+		 </nav>
+		 <header id="header">
+	<h1>Kirim Data dengan Ajax</h1>
+</header>
+	<form method ="POST" onsubmit="return sendData()">
+		<p>
+			<label>Title</label>
+			<input type="text" id="title" placeholder="judul artikel">
+		</p>
+		<p>
+			<label>Isi Artikel</label><br>
+			<textarea id ="body" placeholder="isi artikel.." cols="50"
+			rows="10"></textarea>
+		</p>
+		<input type="submit" value="Kirim"/>
+	</form>
+
+	<script>
+		function sendData(){
+			var xhr = new XMLHttpRequest();
+			var url = "https://jsonplaceholder.typicode.com/posts";
+
+			var data = JSON.stringify({
+				title: document.getElementById("title").value,
+				body: document.getElementById("body").value,
+				userId: 1
+			});
+
+			xhr.open("POST", url, true);
+			xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+			xhr.onload = function () {
+				console.log (this.reponseText);
+			};
+			xhr.send(data);
+			return false;
+		}
+	</script>
+</center>
+</body>
+</html>
+		

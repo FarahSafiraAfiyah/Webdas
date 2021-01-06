@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mari Belajar Coding</title>
+	<script type="text/javascript">
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200){
+				var data=JSON.parse (xhttp.responseText);
+				data.forEach(function (element){
+			document.getelementById("demo").innerHTML +="NIM :" + element.nim + "<br> Nama :" + element.nama + "<br> Alamat :" + element.alamat + "<br><br>";
+
+				});		
+			}
+		};
+		xhttp.open("GET", "data.json", true);
+		xhttp.send();
+</script>
+<style>
+		body{
+			background: pink;
+		}
+		#header{
+			background: grey;
+			color: #333;
+			height: 50px;
+			padding: 50px;
+			}
+		.clr{
+			color: white;
+			background: silver;
+			padding: 30px;
+		
+			}
+		</style>
+</head>
+<body>
+	<center>
+		<nav class="clr">
+		 	<nav class="clr">
+		 	<a href="ajax-1.html">ajax-1||</a>
+		 	<a href="ajax-2.html">ajax-2||</a>
+		 	<a href="ajax-3.html">ajax-3||</a>
+		 	<a href="ajax-jquery.html">ajax-jquery||</a>
+		 	<a href="ajax-jquery2.html">ajax-jquery2||</a>
+		 	<a href="ajax-fetch.html">ajax-fetch||</a>
+		 	<a href="ajax-axios.html">ajax-axios||</a>
+		 	<a href="latihan-json.html">latihan-json||</a>
+		 	<a href="latihan-json2.html">latihan-json2||</a>
+		 	<a href="latihan-json-jquery.html">latihan-json-jquery||</a>
+		 	<a href="latihan-json-jquery2.html">latihan-json-jquery2||</a>
+		 </nav>
+		 
+	<p id="demo"></p>
+</body>
+</html>
